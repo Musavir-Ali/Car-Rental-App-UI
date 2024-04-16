@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -12,29 +13,65 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/Image.png'),
-            fit: BoxFit.cover, // Ensure the image covers the entire screen
+      body: OnBoardingSlider(
+        headerBackgroundColor: Colors.transparent,
+        controllerColor: Colors.deepOrange,
+        finishButtonText: 'Create Account',
+        finishButtonStyle: const FinishButtonStyle(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
+          backgroundColor: Colors.deepOrange,
         ),
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.7,
+        background: [
+          Image.asset('assets/images/Slider1.png'),
+          Image.asset('assets/images/Slider2.png'),
+          Image.asset('assets/images/Slider3.png'),
+        ],
+        totalPage: 3,
+        speed: 1.8,
+        pageBodies: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 480,
+                ),
+                Text(
+                  'Description Text 1',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
             ),
-            const Text(
-              "RIDE IN STYLE",
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 480,
+                ),
+                Text(
+                  'Description Text 2',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 480,
+                ),
+                Text('Description Text 3',
+                    style: TextStyle(color: Colors.white)),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
