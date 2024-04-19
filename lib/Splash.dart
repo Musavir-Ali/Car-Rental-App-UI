@@ -20,9 +20,14 @@ class _SplashScreenState extends State<SplashScreen> {
     'RIDE IN STYLE',
   ];
   final List<String> secondTexts = [
-    'ORDER A RIDE ',
-    'SELECT A CAR',
-    'RIDE IN STYLE',
+    'Order a luxury ride immediately,  ',
+    'Sport, Limousine, Terrain... whatever',
+    'Enjoy the ride in luxury cars,',
+  ];
+  final List<String> thirdTexts = [
+    'or book a car for upcoming event.',
+    'your preference is, we have it.',
+    'with a with professional driver.',
   ];
 
   @override
@@ -66,28 +71,66 @@ class _SplashScreenState extends State<SplashScreen> {
                           fit: BoxFit.fill,
                         ),
                       ),
-                    ),
-                    Center(
-                      child: Text(
-                        imageTexts[index], // Display corresponding text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.65,
+                          ),
+                          Text(
+                            imageTexts[index], // Display corresponding text
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            secondTexts[index], // Display corresponding text
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            thirdTexts[index], // Display corresponding text
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Create Account',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.deepOrange,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 20),
+                              textStyle: const TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Sign In',
+                              style: TextStyle(color: Colors.deepOrange),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    // SizedBox(
-                    //   height: 20.0,
-                    // ),
-                    // Text(
-                    //   secondTexts[index], // Display corresponding text
-                    //   style: TextStyle(
-                    //     color: Colors.white,
-                    //     fontSize: 18.0,
-                    //     fontWeight: FontWeight.bold,
-                    //   ),
-                    // ),
                   ],
                 );
               },
