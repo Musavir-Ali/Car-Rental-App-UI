@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/widgets.dart';
+
+import 'package:get/route_manager.dart';
+import 'package:rental_app/CreateAccount.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -102,10 +103,17 @@ class _SplashScreenState extends State<SplashScreen> {
                             ),
                           ),
                           const SizedBox(
-                            height: 10,
+                            height: 15,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CreateAccount(),
+                                ),
+                              );
+                            },
                             child: Text(
                               'Create Account',
                               style: TextStyle(color: Colors.white),
@@ -116,6 +124,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                   horizontal: 30, vertical: 20),
                               textStyle: const TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
                             ),
                           ),
                           SizedBox(
