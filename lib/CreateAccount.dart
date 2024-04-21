@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rental_app/Register.dart';
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
@@ -87,6 +88,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   Row(
                     children: [
                       Checkbox(
+                        activeColor: Colors.deepOrange,
                         value: _isChecked,
                         onChanged: (bool? value) {
                           setState(() {
@@ -110,7 +112,14 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             SizedBox(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Register(),
+                    ),
+                  );
+                },
                 child: Text(
                   "Next",
                   style: TextStyle(
