@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rental_app/FirstScreen.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -145,7 +146,14 @@ class _RegisterState extends State<Register> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FistScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Get started! it's free!",
                     style: TextStyle(
