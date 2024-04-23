@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:rental_app/ProfilePhoto.dart';
 
 class FistScreen extends StatelessWidget {
   const FistScreen({super.key});
@@ -17,9 +19,9 @@ class FistScreen extends StatelessWidget {
               const Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 20.0),
+                    padding: EdgeInsets.only(left: 15.0),
                     child: Icon(
-                      Icons.cancel_sharp,
+                      Ionicons.close_sharp,
                       color: Color.fromARGB(255, 70, 76, 80),
                       size: 30,
                     ),
@@ -196,7 +198,14 @@ class FistScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 40.0,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProfilePhoto(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepOrange,
                         shape: RoundedRectangleBorder(

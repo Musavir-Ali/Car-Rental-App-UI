@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
-import 'package:get/route_manager.dart';
 import 'package:rental_app/CreateAccount.dart';
 
 class SplashScreen extends StatefulWidget {
