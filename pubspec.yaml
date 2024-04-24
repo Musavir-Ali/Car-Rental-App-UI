@@ -39,6 +39,7 @@ dependencies:
   carousel_slider: ^4.2.1
   
   ionicons: ^0.2.2
+  image_picker: ^1.1.0
   
   
 
