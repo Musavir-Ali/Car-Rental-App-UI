@@ -1,12 +1,11 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:rental_app/Mobile_Number.dart';
 
 class ProfilePhoto extends StatefulWidget {
-  const ProfilePhoto({super.key});
+  const ProfilePhoto({Key? key}) : super(key: key);
 
   @override
   State<ProfilePhoto> createState() => _ProfilePhotoState();
@@ -14,6 +13,16 @@ class ProfilePhoto extends StatefulWidget {
 
 class _ProfilePhotoState extends State<ProfilePhoto> {
   File? _selectedImage;
+
+  Future<void> _pickImage() async {
+    final pickedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedImage != null) {
+      setState(() {
+        _selectedImage = File(pickedImage.path);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +52,6 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //copy from here
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -81,10 +89,7 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
                 ),
               ],
             ),
-            //to here
-            const SizedBox(
-              height: 25,
-            ),
+            const SizedBox(height: 25),
             const Row(
               children: [
                 Padding(
@@ -99,9 +104,7 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 5,
-            ),
+            const SizedBox(height: 5),
             const Row(
               children: [
                 Padding(
@@ -119,16 +122,13 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.19,
             ),
-            const CircleAvatar(
+            CircleAvatar(
               radius: 70,
+              backgroundImage: _selectedImage != null
+                  ? FileImage(_selectedImage!)
+                  : const AssetImage('assets/images/Person.png') as ImageProvider,
               child: Stack(
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'assets/images/Person.png',
-                    ),
-                    radius: 80,
-                  ),
                   Positioned(
                     bottom: 0,
                     right: 0,
@@ -136,7 +136,7 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
                       backgroundColor: Colors.transparent,
                       radius: 21,
                       child: InkWell(
-                        onTap: null,
+                        onTap: _pickImage,
                         child: Icon(
                           Ionicons.add_circle,
                           color: Colors.green,
@@ -154,44 +154,37 @@ class _ProfilePhotoState extends State<ProfilePhoto> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: SizedBox(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ProfilePhoto(),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepOrange,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                width: double.infinity,
+                height: 40.0,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Phone(),
                       ),
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child: const Text(
-                      "Continue",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  ),
+                  child: const Text(
+                    "Continue",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
-                  )),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
       ),
     );
   }
-  // Future _PickImage() async {
-  //   // ignore: deprecated_member_use
-  //   final  returnedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
-  //   setState(() {
-  //     _image = image;
-  //   });
-  // }
 }

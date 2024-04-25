@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  country_calling_code_picker:
+    dependency: "direct main"
+    description:
+      name: country_calling_code_picker
+      sha256: b9afd68e79f38953c463e8ea104533c1b9fc7b37e0948b501f9a7ad6a9a830a5
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   cross_file:
     dependency: transitive
     description:
@@ -134,6 +142,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.19"
+  flutter_sim_country_code:
+    dependency: transitive
+    description:
+      name: flutter_sim_country_code
+      sha256: fd6233ad01b811f5d2845c5b1c18120488417f2882a84df602daa65324e8371e
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -144,6 +160,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.6"
   http:
     dependency: transitive
     description:
