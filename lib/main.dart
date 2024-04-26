@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rental_app/FirstScreen.dart';
 import 'package:rental_app/Logoscreen.dart';
 import 'package:rental_app/Verify.dart';

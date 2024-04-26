@@ -37,10 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_onboarding_slider: ^1.0.11
   carousel_slider: ^4.2.1
-  
+  get: ^4.6.6
   ionicons: ^0.2.2
   image_picker: ^1.1.0
-  get: ^4.6.6
+  
   
   country_calling_code_picker: ^2.0.1
   
