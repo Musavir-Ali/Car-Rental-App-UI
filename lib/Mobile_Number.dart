@@ -3,6 +3,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:country_calling_code_picker/country.dart';
 import 'package:country_calling_code_picker/picker.dart';
 import 'package:country_calling_code_picker/functions.dart';
+import 'package:rental_app/Verify.dart';
 
 class Phone extends StatefulWidget {
   const Phone({super.key});
@@ -210,7 +211,7 @@ class _PhoneState extends State<Phone> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Phone(),
+                        builder: (context) => const Verify(),
                       ),
                     );
                   },
