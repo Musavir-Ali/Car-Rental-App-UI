@@ -85,6 +85,7 @@ class _PhoneState extends State<Phone> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
