@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:rental_app/License.dart';
+import 'package:rental_app/LoadingScreen.dart';
 
 class Verify extends StatefulWidget {
   const Verify({Key? key}) : super(key: key);
@@ -78,7 +79,7 @@ class _VerifyState extends State<Verify> {
                   ),
                   TextButton(
                     onPressed: () {
-                      // Resend OTP
+// Resend OTP
                     },
                     child: const Text(
                       "Resend OTP",
@@ -102,7 +103,7 @@ class _VerifyState extends State<Verify> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => License()),
+                    MaterialPageRoute(builder: (context) => SplashScreen()),
                   );
                 },
                 child: const Text(
