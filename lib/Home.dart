@@ -5,15 +5,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color.fromRGBO(108, 84, 145, 100),
       body: SafeArea(
           child: Column(
         children: [
-          const SizedBox(height: 20),
-          const Center(
-            child: Text("Welcome to the Home Screen",
-                style: TextStyle(fontSize: 14, color: Colors.white)),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Text("Rent a car Anytime",
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold)),
           ),
         ],
       )),
