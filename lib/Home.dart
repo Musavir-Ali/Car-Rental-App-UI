@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           const Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20.0),
+                padding: EdgeInsets.only(left: 10.0),
                 child: Icon(
                   Ionicons.location_sharp,
                   color: Colors.deepOrange,
@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
           const Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20.0),
+                padding: EdgeInsets.only(left: 10.0),
                 child: Text("Rent a car Anytime",
                     style: TextStyle(
                         fontSize: 14,
@@ -54,11 +54,34 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: SearchBox(),
           ),
-          const SizedBox(height: 20),
-          Expanded(
-              child: Row(
-            children: [],
-          )),
+          const SizedBox(height: 10),
+          const Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Text("Top Brands",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.grey,
+                  child: Image.asset(
+                    "assets/images/Farrarilogo.png",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              )
+            ],
+          ),
           const SizedBox(height: 20),
           const Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
