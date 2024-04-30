@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,24 +7,145 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(108, 84, 145, 100),
+      backgroundColor: Color.fromARGB(255, 6, 2, 12),
       body: SafeArea(
           child: Column(
         children: [
-          SizedBox(height: 20),
-          Padding(
-            padding: EdgeInsets.only(left: 20.0),
-            child: Text("Rent a car Anytime",
-                style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold)),
+          const SizedBox(height: 15),
+          const Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: Icon(
+                  Ionicons.location_sharp,
+                  color: Colors.deepOrange,
+                ),
+              ),
+              Text("  New York",
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold)),
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(right: 20.0),
+                child: Icon(
+                  Ionicons.notifications_outline,
+                  color: Colors.deepOrange,
+                ),
+              )
+            ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
+          const Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: Text("Rent a car Anytime",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: SearchBox(),
           ),
+          const SizedBox(height: 20),
+          Expanded(
+              child: Row(
+            children: [],
+          )),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Row(
+              children: [
+                Text("Popular Cars",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold)),
+                Spacer(),
+                Text("View All",
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.deepOrange,
+                        fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                  child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Container(
+                        height: 206,
+                        width: 227,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Container(
+                        height: 206,
+                        width: 227,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Container(
+                        height: 206,
+                        width: 227,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Container(
+                        height: 206,
+                        width: 227,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Container(
+                        height: 206,
+                        width: 227,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ))
+            ],
+          )
         ],
       )),
     );
@@ -51,7 +173,7 @@ class SearchBox extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20)), // Round corners
           borderSide: BorderSide(
             color: Colors.black,
-            width: 1, // Border width
+            width: 3, // Border width
           ),
         ),
         // This removes the default blue border on focus
@@ -59,7 +181,7 @@ class SearchBox extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20)),
           borderSide: BorderSide(
             color: Colors.black,
-            width: 2, // Width when focused
+            width: 6, // Width when focused
           ),
         ),
       ),
