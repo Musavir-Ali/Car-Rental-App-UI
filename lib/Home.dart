@@ -9,167 +9,289 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 6, 2, 12),
       body: SafeArea(
-          child: Column(
-        children: [
-          const SizedBox(height: 15),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 10.0),
-                child: Icon(
-                  Ionicons.location_sharp,
-                  color: Colors.deepOrange,
-                ),
-              ),
-              Text("  New York",
-                  style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold)),
-              Spacer(),
-              Padding(
-                padding: EdgeInsets.only(right: 20.0),
-                child: Icon(
-                  Ionicons.notifications_outline,
-                  color: Colors.deepOrange,
-                ),
-              )
-            ],
-          ),
-          const SizedBox(height: 20),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 10.0),
-                child: Text("Rent a car Anytime",
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold)),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: SearchBox(),
-          ),
-          const SizedBox(height: 10),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 10.0),
-                child: Text("Top Brands",
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold)),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10.0),
-                child: CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.grey,
-                  child: Image.asset(
-                    "assets/images/Farrarilogo.png",
-                    fit: BoxFit.fill,
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(height: 15),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10.0),
+                  child: Icon(
+                    Ionicons.location_sharp,
+                    color: Colors.deepOrange,
                   ),
                 ),
-              )
-            ],
-          ),
-          const SizedBox(height: 20),
-          const Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Row(
-              children: [
-                Text("Popular Cars",
+                Text("  New York",
                     style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 12,
                         color: Colors.white,
                         fontWeight: FontWeight.bold)),
                 Spacer(),
-                Text("View All",
-                    style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.deepOrange,
-                        fontWeight: FontWeight.bold)),
+                Padding(
+                  padding: EdgeInsets.only(right: 20.0),
+                  child: Icon(
+                    Ionicons.notifications_outline,
+                    color: Colors.deepOrange,
+                  ),
+                )
               ],
             ),
-          ),
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              Expanded(
-                  child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Container(
-                        height: 206,
-                        width: 227,
-                        decoration: BoxDecoration(
+            const SizedBox(height: 20),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10.0),
+                  child: Text("Rent a car Anytime",
+                      style: TextStyle(
+                          fontSize: 14,
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Container(
-                        height: 206,
-                        width: 227,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Container(
-                        height: 206,
-                        width: 227,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Container(
-                        height: 206,
-                        width: 227,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Container(
-                        height: 206,
-                        width: 227,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                    ),
-                  ],
+                          fontWeight: FontWeight.bold)),
                 ),
-              ))
-            ],
-          )
-        ],
+              ],
+            ),
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: SearchBox(),
+            ),
+            const SizedBox(height: 10),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10.0),
+                  child: Text("Top Brands",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)),
+                ),
+              ],
+            ),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(
+                      "assets/images/Bentleylogo.png",
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage(
+                      "assets/images/Audilogo.png",
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.black,
+                    backgroundImage: AssetImage(
+                      "assets/images/Mercedeslogo.png",
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(
+                      "assets/images/BMWlogo.png",
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: Row(
+                children: [
+                  Text("Popular Cars",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)),
+                  Spacer(),
+                  Text("View All",
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.deepOrange,
+                          fontWeight: FontWeight.bold)),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                    child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.30,
+                                child: Image.asset(
+                                  "assets/images/BMW840i.png",
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ))
+              ],
+            ),
+            const SizedBox(height: 20),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10.0),
+                  child: Text("Top Rated Cars",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                    child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ))
+              ],
+            ),
+          ],
+        ),
       )),
     );
   }
