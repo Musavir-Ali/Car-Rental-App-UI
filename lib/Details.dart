@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 
 class Detail extends StatelessWidget {
@@ -139,10 +140,11 @@ class Detail extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Center(
-                    child: Column(
-                      children: [
-                        Row(
+                  const Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        child: Row(
                           children: [
                             Text("9-Speed Automatic",
                                 style: TextStyle(
@@ -153,12 +155,66 @@ class Detail extends StatelessWidget {
                                     color: Colors.white, fontSize: 12)),
                           ],
                         ),
-                        Row(),
-                        Row(),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        child: Row(
+                          children: [
+                            Text("Parking Assistance",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                            SizedBox(
+                              width: 45,
+                            ),
+                            Text("Turbo Engine",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        child: Row(
+                          children: [
+                            Text("Collision Warning",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                            SizedBox(
+                              width: 54,
+                            ),
+                            Text("4WD/AWD",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                          ],
+                        ),
+                      ),
+                    ],
                   )
                 ],
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 1,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: MediaQuery.of(context).size.height * 0.1,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.deepOrange,
+                    blurRadius: 5,
+                    spreadRadius: 1,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+                borderRadius: BorderRadius.circular(20),
               ),
             )
           ],
