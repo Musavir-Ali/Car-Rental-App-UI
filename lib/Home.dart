@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
@@ -69,47 +70,50 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-            const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage(
-                      "assets/images/Bentleylogo.png",
+            const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage(
+                        "assets/images/Bentleylogo.png",
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.white,
-                    backgroundImage: AssetImage(
-                      "assets/images/Audilogo.png",
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.white,
+                      backgroundImage: AssetImage(
+                        "assets/images/Audilogo.png",
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.black,
-                    backgroundImage: AssetImage(
-                      "assets/images/Mercedeslogo.png",
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.black,
+                      backgroundImage: AssetImage(
+                        "assets/images/Mercedeslogo.png",
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage(
-                      "assets/images/BMWlogo.png",
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage(
+                        "assets/images/BMWlogo.png",
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(height: 20),
             const Padding(
@@ -144,7 +148,7 @@ class Home extends StatelessWidget {
                           height: 206,
                           width: 227,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
@@ -177,7 +181,7 @@ class Home extends StatelessWidget {
                                   Text("4.5",
                                       style: TextStyle(
                                           fontSize: 14,
-                                          color: Colors.black,
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
                                     width: 3,
@@ -192,7 +196,7 @@ class Home extends StatelessWidget {
                                   Text("Available Now",
                                       style: TextStyle(
                                           fontSize: 12,
-                                          color: Colors.black,
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                 ],
                               ),
@@ -203,22 +207,22 @@ class Home extends StatelessWidget {
                                   ),
                                   Icon(
                                     Ionicons.car_sport,
-                                    color: Colors.black,
+                                    color: Colors.green,
                                     size: 15,
                                   ),
                                   SizedBox(
-                                    width: 1,
+                                    width: 2,
                                   ),
                                   Text("4 Seats",
                                       style: TextStyle(
                                           fontSize: 12,
-                                          color: Colors.black,
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   Spacer(),
                                   Text("\$100/Hr",
                                       style: TextStyle(
                                           fontSize: 14,
-                                          color: Colors.deepOrange,
+                                          color: Colors.green,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
                                     width: 4,
