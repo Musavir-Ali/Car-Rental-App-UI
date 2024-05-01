@@ -184,7 +184,7 @@ class Home extends StatelessWidget {
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
-                                    width: 3,
+                                    width: 4,
                                   )
                                 ],
                               ),
@@ -225,7 +225,7 @@ class Home extends StatelessWidget {
                                           color: Colors.green,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
-                                    width: 4,
+                                    width: 10,
                                   )
                                 ],
                               )
@@ -239,8 +239,88 @@ class Home extends StatelessWidget {
                           height: 206,
                           width: 227,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.22,
+                                width: 277,
+                                child: Image.asset(
+                                  "assets/images/MercedesGLE.png",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Mercedes GLE",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.8",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available from 10:00 AM",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("4 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$150/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -250,8 +330,88 @@ class Home extends StatelessWidget {
                           height: 206,
                           width: 227,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.22,
+                                width: 277,
+                                child: Image.asset(
+                                  "assets/images/Lamb.jpeg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Lamborghini",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("5",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("2 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$250/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -261,8 +421,88 @@ class Home extends StatelessWidget {
                           height: 206,
                           width: 227,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.22,
+                                width: 277,
+                                child: Image.asset(
+                                  "assets/images/Bently.png",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Bentley",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.4",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("2 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$250/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -272,8 +512,88 @@ class Home extends StatelessWidget {
                           height: 206,
                           width: 227,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.22,
+                                width: 277,
+                                child: Image.asset(
+                                  "assets/images/AlfaRomeo.png",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Alfa Romeo",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.1",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("2 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$150/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
