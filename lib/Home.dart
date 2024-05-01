@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 
 class Home extends StatelessWidget {
@@ -150,11 +151,79 @@ class Home extends StatelessWidget {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.30,
+                                    MediaQuery.of(context).size.height * 0.22,
+                                width: 277,
                                 child: Image.asset(
                                   "assets/images/BMW840i.png",
-                                  fit: BoxFit.fitWidth,
+                                  fit: BoxFit.cover,
                                 ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("BMW 840i",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.5",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 3,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.black,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 1,
+                                  ),
+                                  Text("4 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$100/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
                               )
                             ],
                           ),
