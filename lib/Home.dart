@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:rental_app/Details.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -153,13 +154,23 @@ class Home extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.22,
-                                width: 277,
-                                child: Image.asset(
-                                  "assets/images/BMW840i.png",
-                                  fit: BoxFit.cover,
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Detail(),
+                                    ),
+                                  );
+                                },
+                                child: SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.22,
+                                  width: 277,
+                                  child: Image.asset(
+                                    "assets/images/BMW840i.png",
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               const Row(
@@ -992,6 +1003,9 @@ class Home extends StatelessWidget {
                 ))
               ],
             ),
+            const SizedBox(
+              height: 20,
+            )
           ],
         ),
       )),
