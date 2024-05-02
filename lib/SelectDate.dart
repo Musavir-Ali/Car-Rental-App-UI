@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart'; // Used for formatting dates
 
 class SelectDate extends StatefulWidget {
   const SelectDate({super.key});
@@ -9,14 +10,23 @@ class SelectDate extends StatefulWidget {
 }
 
 class _SelectDateState extends State<SelectDate> {
+  // A list to store the selected date range
+  List<DateTime?> _selectedDates = [];
+
+  // Function to format dates for display
+  String _formatDate(DateTime? date) {
+    return date == null ? "None" : DateFormat.yMMMd().format(date);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 41, 23, 72),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
-            color: Colors.deepPurple,
+            color: Colors.deepOrange,
             size: 30,
           ),
           onPressed: () {
@@ -26,7 +36,7 @@ class _SelectDateState extends State<SelectDate> {
         title: const Text(
           'Select Date',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 14,
             fontWeight: FontWeight.bold,
           ),
@@ -34,12 +44,15 @@ class _SelectDateState extends State<SelectDate> {
         actions: [
           TextButton(
             onPressed: () {
-              Navigator.pop(context);
+              // Reset the date selection
+              setState(() {
+                _selectedDates = [];
+              });
             },
             child: const Text(
               'Reset',
               style: TextStyle(
-                color: Colors.deepPurple,
+                color: Colors.deepOrange,
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
@@ -47,11 +60,39 @@ class _SelectDateState extends State<SelectDate> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
+      body: Column(
+        children: [
+          // Container with the selected date range
+          Container(
+            height: MediaQuery.of(context).size.height * 0.15,
+            color: Colors.grey[900],
+            child: Center(
+              child: Text(
+                '${_formatDate(_selectedDates.isNotEmpty ? _selectedDates[0] : null)} -> '
+                '${_formatDate(_selectedDates.length > 1 ? _selectedDates[1] : null)}',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: CalendarDatePicker2(
+              config: CalendarDatePicker2Config(
+                calendarType: CalendarDatePicker2Type.range,
+              ),
+              value: _selectedDates,
+              onValueChanged: (dates) {
+                setState(() {
+                  _selectedDates = dates; // Update when the range changes
+                });
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
