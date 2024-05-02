@@ -67,14 +67,35 @@ class _SelectDateState extends State<SelectDate> {
             height: MediaQuery.of(context).size.height * 0.15,
             color: Colors.grey[900],
             child: Center(
-              child: Text(
-                '${_formatDate(_selectedDates.isNotEmpty ? _selectedDates[0] : null)} -> '
-                '${_formatDate(_selectedDates.length > 1 ? _selectedDates[1] : null)}',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min, // To center-align the content
+                children: [
+                  Text(
+                    _formatDate(
+                        _selectedDates.isNotEmpty ? _selectedDates[0] : null),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(width: 10), // Add some spacing
+                  const Icon(
+                    Icons.arrow_forward, // Arrow icon
+                    color: Colors.deepOrange,
+                  ),
+                  const SizedBox(
+                      width: 10), // Add spacing between icon and text
+                  Text(
+                    _formatDate(
+                        _selectedDates.length > 1 ? _selectedDates[1] : null),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
