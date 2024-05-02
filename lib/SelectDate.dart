@@ -68,7 +68,7 @@ class _SelectDateState extends State<SelectDate> {
             color: Colors.grey[900],
             child: Center(
               child: Row(
-                mainAxisSize: MainAxisSize.min, // To center-align the content
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     _formatDate(
@@ -79,13 +79,12 @@ class _SelectDateState extends State<SelectDate> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(width: 10), // Add some spacing
+                  const SizedBox(width: 10),
                   const Icon(
-                    Icons.arrow_forward, // Arrow icon
+                    Icons.arrow_forward,
                     color: Colors.deepOrange,
                   ),
-                  const SizedBox(
-                      width: 10), // Add spacing between icon and text
+                  const SizedBox(width: 10),
                   Text(
                     _formatDate(
                         _selectedDates.length > 1 ? _selectedDates[1] : null),
@@ -99,20 +98,60 @@ class _SelectDateState extends State<SelectDate> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: CalendarDatePicker2(
-              config: CalendarDatePicker2Config(
-                calendarType: CalendarDatePicker2Type.range,
+          const SizedBox(height: 10),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: CalendarDatePicker2(
+                config: CalendarDatePicker2Config(
+                  calendarType: CalendarDatePicker2Type.range,
+                ),
+                value: _selectedDates,
+                onValueChanged: (dates) {
+                  setState(() {
+                    _selectedDates = dates;
+                  });
+                },
               ),
-              value: _selectedDates,
-              onValueChanged: (dates) {
-                setState(() {
-                  _selectedDates = dates; // Update when the range changes
-                });
-              },
             ),
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.05,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: SizedBox(
+              width: double.infinity,
+              height: 40.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const (),
+                  //   ),
+                  // );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                child: const Text(
+                  "Continue",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
