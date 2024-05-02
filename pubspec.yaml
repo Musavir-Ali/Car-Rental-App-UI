@@ -44,6 +44,7 @@ dependencies:
   
   country_calling_code_picker: ^2.0.1
   loading_animation_widget: ^1.2.1
+  calendar_date_picker2: ^0.5.6
   
   
   

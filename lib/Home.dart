@@ -230,7 +230,7 @@ class Home extends StatelessWidget {
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   Spacer(),
-                                  Text("\$100/Hr",
+                                  Text("\$200/Hr",
                                       style: TextStyle(
                                           fontSize: 14,
                                           color: Colors.green,

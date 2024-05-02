@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:rental_app/SelectDate.dart';
 
 class Detail extends StatelessWidget {
   const Detail({super.key});
@@ -70,7 +71,7 @@ class Detail extends StatelessWidget {
               ),
             ),
             Container(
-              color: Color.fromARGB(255, 41, 23, 72),
+              color: const Color.fromARGB(255, 41, 23, 72),
               child: Column(
                 children: [
                   Padding(
@@ -85,7 +86,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.speed,
-                                  color: Colors.deepPurple,
+                                  color: Color.fromARGB(255, 202, 182, 6),
                                   size: 40,
                                 ),
                                 Text(
@@ -103,7 +104,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Ionicons.car_sport_sharp,
-                                  color: Colors.deepPurple,
+                                  color: Color.fromARGB(255, 202, 182, 6),
                                   size: 40,
                                 ),
                                 Text(
@@ -121,7 +122,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Ionicons.flash_sharp,
-                                  color: Colors.deepPurple,
+                                  color: Color.fromARGB(255, 202, 182, 6),
                                   size: 40,
                                 ),
                                 Text(
@@ -140,26 +141,28 @@ class Detail extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Column(
+                  Column(
                     children: [
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 30.0),
                         child: Row(
                           children: [
                             Text("9-Speed Automatic",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
-                            Spacer(),
-                            Text("Parking Assistance",
+                            SizedBox(
+                              width: 45,
+                            ),
+                            Text("Cruise Control",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 30.0),
                         child: Row(
                           children: [
@@ -175,10 +178,10 @@ class Detail extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 30.0),
                         child: Row(
                           children: [
@@ -194,29 +197,82 @@ class Detail extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.09,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        height: MediaQuery.of(context).size.height * 0.1,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[900],
+                          border: Border.all(
+                            color: Colors.deepOrange,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '\$ 200',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Spacer(),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SelectDate()));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.deepOrange,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                child: const Text(
+                                  'Select',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                          height: 20,
+                          child: Container(
+                            color: const Color.fromARGB(255, 41, 23, 72),
+                          ))
                     ],
                   )
                 ],
               ),
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 1,
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.deepOrange,
-                    blurRadius: 5,
-                    spreadRadius: 1,
-                    offset: Offset(0, 0),
-                  ),
-                ],
-                borderRadius: BorderRadius.circular(20),
-              ),
-            )
           ],
         ),
       )),
