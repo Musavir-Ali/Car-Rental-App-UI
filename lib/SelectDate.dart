@@ -1,6 +1,7 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // Used for formatting dates
+import 'package:intl/intl.dart';
+import 'package:rental_app/Pickup.dart'; // Used for formatting dates
 
 class SelectDate extends StatefulWidget {
   const SelectDate({super.key});
@@ -22,7 +23,7 @@ class _SelectDateState extends State<SelectDate> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 41, 23, 72),
+        backgroundColor: Colors.black,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
@@ -104,6 +105,7 @@ class _SelectDateState extends State<SelectDate> {
               padding: const EdgeInsets.all(8),
               child: CalendarDatePicker2(
                 config: CalendarDatePicker2Config(
+                  selectedDayHighlightColor: Colors.deepOrange,
                   calendarType: CalendarDatePicker2Type.range,
                 ),
                 value: _selectedDates,
@@ -125,12 +127,12 @@ class _SelectDateState extends State<SelectDate> {
               height: 40.0,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const (),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Pickup(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepOrange,
