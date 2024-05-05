@@ -54,7 +54,7 @@ class _PickupState extends State<Pickup> {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.3,
+            height: MediaQuery.of(context).size.height,
             child: GoogleMap(
               onMapCreated: (controller) {
                 mapController = controller;

@@ -144,15 +144,13 @@ class Detail extends StatelessWidget {
                   Column(
                     children: [
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
                         child: Row(
                           children: [
                             Text("9-Speed Automatic",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
-                            SizedBox(
-                              width: 45,
-                            ),
+                            Spacer(),
                             Text("Cruise Control",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
@@ -163,15 +161,13 @@ class Detail extends StatelessWidget {
                         height: 10,
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
                         child: Row(
                           children: [
                             Text("Parking Assistance",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
-                            SizedBox(
-                              width: 45,
-                            ),
+                            Spacer(),
                             Text("Turbo Engine",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
@@ -182,16 +178,14 @@ class Detail extends StatelessWidget {
                         height: 10,
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
                         child: Row(
                           children: [
                             Text("Collision Warning",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
-                            SizedBox(
-                              width: 54,
-                            ),
-                            Text("4WD/AWD",
+                            Spacer(),
+                            Text("4WD/AWD/RS",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12)),
                           ],
