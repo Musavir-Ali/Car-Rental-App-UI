@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:rental_app/FirstScreen.dart';
+import 'package:rental_app/Details.dart';
 import 'package:rental_app/Home.dart';
-import 'package:rental_app/License.dart';
 import 'package:rental_app/Logoscreen.dart';
-import 'package:rental_app/SelectDate.dart';
-import 'package:rental_app/Verify.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Logo(),
+      home: Detail(),
     );
   }
 }

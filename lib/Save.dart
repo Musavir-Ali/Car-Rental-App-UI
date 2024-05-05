@@ -74,53 +74,53 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: const Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage(
-                            "assets/images/Bentleylogo.png",
-                          ),
-                        ),
+            const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 2.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage(
+                        "assets/images/Bentleylogo.png",
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 10.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(
-                            "assets/images/Audilogo.png",
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 10.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.black,
-                          backgroundImage: AssetImage(
-                            "assets/images/Mercedeslogo.png",
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 10.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage(
-                            "assets/images/BMWlogo.png",
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                )),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.white,
+                      backgroundImage: AssetImage(
+                        "assets/images/Audilogo.png",
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.black,
+                      backgroundImage: AssetImage(
+                        "assets/images/Mercedeslogo.png",
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage(
+                        "assets/images/BMWlogo.png",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -150,111 +150,109 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
-                        child: Expanded(
-                          child: Container(
-                            height: 216,
-                            width: 227,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[800],
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => const Detail(),
-                                      ),
-                                    );
-                                  },
-                                  child: SizedBox(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.22,
-                                    width: 277,
-                                    child: Image.asset(
-                                      "assets/images/BMW840i.png",
-                                      fit: BoxFit.cover,
+                        child: Container(
+                          height: 206,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[800],
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Detail(),
                                     ),
+                                  );
+                                },
+                                child: SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.22,
+                                  width: 277,
+                                  child: Image.asset(
+                                    "assets/images/BMW840i.png",
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text("BMW 840i",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.deepOrange,
-                                            fontWeight: FontWeight.bold)),
-                                    Spacer(),
-                                    Icon(
-                                      Ionicons.star,
-                                      color: Colors.deepOrange,
-                                      size: 15,
-                                    ),
-                                    Text("4.5",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    SizedBox(
-                                      width: 4,
-                                    )
-                                  ],
-                                ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text("Available Now",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                  ],
-                                ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Icon(
-                                      Ionicons.car_sport,
-                                      color: Colors.green,
-                                      size: 15,
-                                    ),
-                                    SizedBox(
-                                      width: 2,
-                                    ),
-                                    Text("4 Seats",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    Spacer(),
-                                    Text("\$200/Hr",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.green,
-                                            fontWeight: FontWeight.bold)),
-                                    SizedBox(
-                                      width: 10,
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("BMW 840i",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.5",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("4 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$200/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -345,7 +343,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -436,7 +434,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -527,7 +525,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -644,7 +642,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -735,7 +733,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -826,7 +824,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
@@ -917,7 +915,7 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Container(
-                          height: 216,
+                          height: 206,
                           width: 227,
                           decoration: BoxDecoration(
                             color: Colors.grey[800],
