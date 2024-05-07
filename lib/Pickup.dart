@@ -7,7 +7,7 @@ class Pickup extends StatefulWidget {
   _PickupState createState() => _PickupState();
 }
 
-bool _isChecked = false;
+String? _selectedValue;
 
 class _PickupState extends State<Pickup> {
   @override
@@ -72,7 +72,7 @@ class _PickupState extends State<Pickup> {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -83,14 +83,13 @@ class _PickupState extends State<Pickup> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Radio(
-                        groupValue:
-                            _isChecked, // Add the required 'groupValue' argument here
+                      leading: Radio<String>(
+                        groupValue: _selectedValue,
                         activeColor: Colors.deepOrange,
-                        value: _isChecked,
-                        onChanged: (bool? value) {
+                        value: 'Option1',
+                        onChanged: (value) {
                           setState(() {
-                            _isChecked = value ?? true;
+                            _selectedValue = value; // Update the group value
                           });
                         },
                       ),
@@ -98,14 +97,15 @@ class _PickupState extends State<Pickup> {
                         "Car Location",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       subtitle: const Text(
                         "Pickup from car's location",
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 14,
+                          fontSize: 12,
                         ),
                       ),
                       trailing: const Text("Free",
@@ -116,14 +116,13 @@ class _PickupState extends State<Pickup> {
                     ),
                     const Divider(color: Colors.grey),
                     ListTile(
-                      leading: Radio(
-                        groupValue:
-                            _isChecked, // Add the required 'groupValue' argument here
+                      leading: Radio<String>(
+                        groupValue: _selectedValue,
                         activeColor: Colors.deepOrange,
-                        value: _isChecked,
-                        onChanged: (bool? value) {
+                        value: 'Option2',
+                        onChanged: (value) {
                           setState(() {
-                            _isChecked = value ?? false;
+                            _selectedValue = value; // Update the group value
                           });
                         },
                       ),
@@ -131,84 +130,84 @@ class _PickupState extends State<Pickup> {
                         "Miami International Airport",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 12,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      subtitle: Text(
-                        "We'll send you a OTP",
+                      subtitle: const Text(
+                        "Airport",
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 14,
+                          fontSize: 12,
                         ),
                       ),
-                      trailing: Text("\120",
+                      trailing: const Text("\120",
                           style: TextStyle(
                             color: Colors.deepOrange,
                             fontSize: 14,
                           )),
                     ),
-                    Divider(color: Colors.grey),
+                    const Divider(color: Colors.grey),
                     ListTile(
-                      leading: Radio(
-                        groupValue:
-                            _isChecked, // Add the required 'groupValue' argument here
+                      leading: Radio<String>(
+                        groupValue: _selectedValue,
                         activeColor: Colors.deepOrange,
-                        value: _isChecked,
-                        onChanged: (bool? value) {
+                        value: 'Option3',
+                        onChanged: (value) {
                           setState(() {
-                            _isChecked = value ?? false;
+                            _selectedValue = value; // Update the group value
                           });
                         },
                       ),
-                      title: Text(
-                        "Driver's License",
+                      title: const Text(
+                        "Ford International Airport",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         "Upload your driver's license",
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 14,
+                          fontSize: 12,
                         ),
                       ),
-                      trailing: Text("\120",
+                      trailing: const Text("\120",
                           style: TextStyle(
                             color: Colors.deepOrange,
                             fontSize: 14,
                           )),
                     ),
-                    Divider(color: Colors.grey),
+                    const Divider(color: Colors.grey),
                     ListTile(
-                      leading: Radio(
-                        groupValue:
-                            _isChecked, // Add the required 'groupValue' argument here
+                      leading: Radio<String>(
+                        groupValue: _selectedValue,
                         activeColor: Colors.deepOrange,
-                        value: _isChecked,
-                        onChanged: (bool? value) {
+                        value: 'Option4',
+                        onChanged: (value) {
                           setState(() {
-                            _isChecked = value ?? false;
+                            _selectedValue = value; // Update the group value
                           });
                         },
                       ),
-                      title: Text(
-                        "Payment Method",
+                      title: const Text(
+                        "Cruiseport Destinations",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      subtitle: Text(
-                        "We accept all major credit cards",
+                      subtitle: const Text(
+                        "1001 North America Way, Miami, FL 33132",
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 14,
+                          fontSize: 12,
                         ),
                       ),
-                      trailing: Text("\120",
+                      trailing: const Text("\120",
                           style: TextStyle(
                             color: Colors.deepOrange,
                             fontSize: 14,
