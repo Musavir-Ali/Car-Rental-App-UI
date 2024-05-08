@@ -1,7 +1,8 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:rental_app/Pickup.dart'; // Used for formatting dates
+import 'package:rental_app/Pickup.dart';
+import 'package:rental_app/global_data.dart'; // Used for formatting dates
 
 class SelectDate extends StatefulWidget {
   const SelectDate({super.key});
@@ -31,6 +32,7 @@ class _SelectDateState extends State<SelectDate> {
             size: 30,
           ),
           onPressed: () {
+
             Navigator.pop(context);
           },
         ),
@@ -127,6 +129,7 @@ class _SelectDateState extends State<SelectDate> {
               height: 40.0,
               child: ElevatedButton(
                 onPressed: () {
+                  GlobalData().selectedDates = _selectedDates;
                   Navigator.push(
                     context,
                     MaterialPageRoute(

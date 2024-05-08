@@ -71,7 +71,6 @@ class Detail extends StatelessWidget {
               ),
             ),
             Container(
-              color: const Color.fromARGB(255, 41, 23, 72),
               child: Column(
                 children: [
                   Padding(
@@ -86,7 +85,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.speed,
-                                  color: Color.fromARGB(255, 202, 182, 6),
+                                  color: Colors.deepOrange,
                                   size: 40,
                                 ),
                                 Text(
@@ -104,7 +103,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Ionicons.car_sport_sharp,
-                                  color: Color.fromARGB(255, 202, 182, 6),
+                                  color: Colors.deepOrange,
                                   size: 40,
                                 ),
                                 Text(
@@ -122,7 +121,7 @@ class Detail extends StatelessWidget {
                               children: [
                                 Icon(
                                   Ionicons.flash_sharp,
-                                  color: Color.fromARGB(255, 202, 182, 6),
+                                  color: Colors.deepOrange,
                                   size: 40,
                                 ),
                                 Text(
@@ -260,7 +259,7 @@ class Detail extends StatelessWidget {
                       SizedBox(
                           height: 20,
                           child: Container(
-                            color: const Color.fromARGB(255, 41, 23, 72),
+                            color: Colors.grey[900],
                           ))
                     ],
                   )
