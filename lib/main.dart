@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rental_app/Booking.dart';
 import 'package:rental_app/Details.dart';
 import 'package:rental_app/Home.dart';
+import 'package:rental_app/License.dart';
 import 'package:rental_app/Logoscreen.dart';
+import 'package:rental_app/Pay.dart';
 import 'package:rental_app/Pickup.dart';
 import 'package:rental_app/SelectDate.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Logo(),
+      home: Pay(),
     );
   }
 }

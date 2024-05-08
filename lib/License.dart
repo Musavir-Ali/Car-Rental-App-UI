@@ -171,7 +171,7 @@ class License extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(5),
                               ),
                               filled: true,
                               fillColor: Colors.white,
@@ -199,7 +199,7 @@ class License extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(5),
                               ),
                               filled: true,
                               fillColor: Colors.white,
@@ -227,7 +227,7 @@ class License extends StatelessWidget {
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
@@ -256,7 +256,7 @@ class License extends StatelessWidget {
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
@@ -288,7 +288,7 @@ class License extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>  Home(),
+                        builder: (context) => Home(),
                       ),
                     );
                   },

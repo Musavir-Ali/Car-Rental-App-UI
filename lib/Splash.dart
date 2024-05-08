@@ -49,8 +49,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 aspectRatio: MediaQuery.of(context).size.aspectRatio,
                 enlargeCenterPage: true,
                 autoPlay: false,
-                autoPlayInterval: Duration(seconds: 3),
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayInterval: const Duration(seconds: 3),
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
                 autoPlayCurve: Curves.fastOutSlowIn,
                 pauseAutoPlayOnTouch: true,
                 scrollDirection: Axis.horizontal,
@@ -108,31 +108,31 @@ class _SplashScreenState extends State<SplashScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => CreateAccount(),
+                                  builder: (context) => const CreateAccount(),
                                 ),
                               );
                             },
-                            child: Text(
-                              'Create Account',
-                              style: TextStyle(color: Colors.white),
-                            ),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.deepOrange,
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 20),
+                                  horizontal: 90, vertical: 20),
                               textStyle: const TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
+                            child: const Text(
+                              'Create Account',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           TextButton(
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               'Sign In',
                               style: TextStyle(color: Colors.deepOrange),
                             ),
