@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Pay extends StatefulWidget {
   const Pay({super.key});
@@ -73,9 +74,9 @@ class _PayState extends State<Pay> {
                           color: Colors.white, size: 25),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
+                      width: MediaQuery.of(context).size.width * 0.85,
                       decoration: BoxDecoration(
-                        color: Colors.grey[800],
+                        color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -95,16 +96,58 @@ class _PayState extends State<Pay> {
                             ],
                           ),
                           const SizedBox(height: 10),
-                          TextField(
+                          const TextField(
                             decoration: InputDecoration(
-                              hintText: "Card Number",
-                              hintStyle: TextStyle(
+                              labelText: 'Card Number',
+                              labelStyle: TextStyle(
                                 color: Colors.white,
                               ),
                               border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
+                            keyboardType: TextInputType.number,
+                          ),
+                          const SizedBox(height: 20.0),
+                          const Row(
+                            children: [
+                              Flexible(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    labelText: 'MM/YY',
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  keyboardType: TextInputType.datetime,
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              Flexible(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    labelText: 'CVV',
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  keyboardType: TextInputType.number,
+                                  obscureText: true, // Hide CVV input
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
