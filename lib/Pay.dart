@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:rental_app/last.dart';
+
 
 class Pay extends StatefulWidget {
   const Pay({super.key});
@@ -164,8 +167,22 @@ class _PayState extends State<Pay> {
                   ),
                   const Divider(color: Colors.grey),
                   ListTile(
-                    leading: Image.asset('assets/images/GooglePay.png'),
-                    title: const Text("Apple Pay",
+                    leading: Image.asset(
+                      'assets/images/pngwing.com.png',
+                      height: 30,
+                    ),
+                    title: const Text("Google Pay",
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                    trailing: const Icon(Icons.arrow_drop_down_sharp,
+                        color: Colors.white, size: 25),
+                  ),
+                  const Divider(color: Colors.grey),
+                  ListTile(
+                    leading: Image.asset('assets/images/paypal.png'),
+                    title: const Text("Paypal",
                         style: TextStyle(
                             fontSize: 14,
                             color: Colors.white,
@@ -176,6 +193,39 @@ class _PayState extends State<Pay> {
                 ],
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.14),
+            SizedBox(
+              width: double.infinity,
+              height: 40.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoungeEnterAnimationScreen(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                child: const Text(
+                  "Confirm Payment",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
