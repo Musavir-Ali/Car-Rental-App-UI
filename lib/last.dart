@@ -21,8 +21,8 @@ class _LoungeEnterAnimationScreenState
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 4, 4, 4),
-      body: Container(
+      backgroundColor: Color.fromARGB(255, 0, 10, 7),
+      body: SizedBox(
         height: Get.height,
         width: Get.width,
         child: Image.asset("assets/images/done.gif"),
