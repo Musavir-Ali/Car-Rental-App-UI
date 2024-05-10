@@ -150,104 +150,102 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
-                        child: Expanded(
-                          child: Container(
-                            height: 216,
-                            width: 227,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[800],
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => const Detail(),
-                                      ),
-                                    );
-                                  },
-                                  child: SizedBox(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.22,
-                                    width: 277,
-                                    child: Image.asset(
-                                      "assets/images/BMW840i.png",
-                                      fit: BoxFit.cover,
+                        child: Container(
+                          height: 216,
+                          width: 227,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[800],
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Detail(),
                                     ),
+                                  );
+                                },
+                                child: SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.22,
+                                  width: 277,
+                                  child: Image.asset(
+                                    "assets/images/BMW840i.png",
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text("BMW 840i",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.deepOrange,
-                                            fontWeight: FontWeight.bold)),
-                                    Spacer(),
-                                    Icon(
-                                      Ionicons.star,
-                                      color: Colors.deepOrange,
-                                      size: 15,
-                                    ),
-                                    Text("4.5",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    SizedBox(
-                                      width: 4,
-                                    )
-                                  ],
-                                ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text("Available Now",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                  ],
-                                ),
-                                const Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Icon(
-                                      Ionicons.car_sport,
-                                      color: Colors.green,
-                                      size: 15,
-                                    ),
-                                    SizedBox(
-                                      width: 2,
-                                    ),
-                                    Text("4 Seats",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    Spacer(),
-                                    Text("\$200/Hr",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.green,
-                                            fontWeight: FontWeight.bold)),
-                                    SizedBox(
-                                      width: 10,
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("BMW 840i",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Icon(
+                                    Ionicons.star,
+                                    color: Colors.deepOrange,
+                                    size: 15,
+                                  ),
+                                  Text("4.5",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 4,
+                                  )
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 3,
+                                  ),
+                                  Text("Available Now",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Icon(
+                                    Ionicons.car_sport,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text("4 Seats",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Spacer(),
+                                  Text("\$200/Hr",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    width: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
                       ),
